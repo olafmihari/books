@@ -105,9 +105,19 @@
 // const names = document.getElementById('names')
 const weaponsContainer = document.getElementById('weapons-container')
 
+const resetBtn = document.createElement('button')
+resetBtn.textContent = 'Reset votes'
+resetBtn.addEventListener('click', () => {
+  document.querySelectorAll('.votes-count').forEach(votesCount => {
+    votesCount.textContent = '0 votes'
+  })
+})
+
+weaponsContainer.append(resetBtn)
 fetch('https://api.open5e.com/weapons/').then(res => res.json()).then(res => {
     // console.log(res.results)
     res.results.forEach(weapon => {
+ 
         // const h4 = document.createElement('h4')
         // h4.textContent = weapon.name
         // names.append(h4)
@@ -154,22 +164,7 @@ fetch('https://api.open5e.com/weapons/').then(res => res.json()).then(res => {
 
 
 
-function submitVoteBtn() {
-    const btn = document.querySelectorAll('button');
-    const votesCount = document.querySelectorAll('.description p span');
-    btn.forEach((element, btnindex) => {
-        element.addEventListener('click', () => {
-            votesCount.forEach((element, voteindex) => {
-                if (btnindex == voteindex) {
-                    let voteId = btn[btnindex].dataset.id;
-                    let numVotes = parseInt(element.textContent) + 1;
-                    element.textContent = numVotes;
-                    addVote(voteId, numVotes);
-                }
-            })
-        })
-    })
-}
+
 
 // const resetButton = document.getElementById('resetButton');
 

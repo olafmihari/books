@@ -129,9 +129,69 @@ img {
 .names{
     background: lightgray;
     padding: 12px;
-    height: 150px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+/* Style for the weapon list container */
+#weapons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* Style for the weapon div */
+.names {
+    width: 45%;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.names h4 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.names p {
+    margin: 0 0 5px;
+    font-weight: bold;
+}
+
+.names a {
+    color: blue;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.names a:hover {
+    text-decoration: underline;
+}
+
+/* Style for the vote button */
+.vote-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.vote-btn:hover {
+    background-color: #3e8e41;
+}
+
+/* Style for the vote count */
+.votes-count {
+    font-weight: bold;
+    margin-left: 10px;
 }
