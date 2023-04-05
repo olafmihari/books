@@ -59,3 +59,5 @@ fetch('https://api.open5e.com/weapons/').then(res => res.json()).then(res => {
   // Add event listener to search button
   searchBtn.addEventListener('click', searchWeapons);
 });
+
+

@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     width: 100%;
     height: auto;
@@ -216,3 +217,4 @@ img {
 #search-btn:hover {
     background-color: #3e8e41;
 }
+
