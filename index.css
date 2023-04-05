@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    display: grid;
+    place-items: center;
+}
+
+.Weapons {
+    background-color: #0E34A0;
+    height: 90%;
+    width: 70%;
+    overflow-y: hidden;
+}
+
+h2 {
+    text-align: center;
+    height: 15%;
+    border: 2px;
+    text-decoration: underline;
+}
+
+.weaponNames {
+    height: 90%;
+    border: 2px solid #2F3061;
+    overflow: auto;
+}
+
+.weaponNames .title {
+    background-color: #5F5980;
+    width: 200px;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.weaponNames .title:hover {
+    background-color: blueviolet;
+}
+
+.weaponNames .title:active {
+    scale: 1.05;
+}
+
+.singleWeapon {
+    min-height: 100px;
+    width: max-content;
+    margin: 5px auto;
+    position: relative;
+}
+
+.singleWeapon.active {
+    border: 5px solid #DFDFDF;
+}
+
+.singleWeapon.active:hover {
+    background-color: rgb(0, 255, 191);
+}
+
+.description {
+    height: 250px;
+    display: none;
+}
+
+.description p {
+    background-color: rgb(64, 255, 0);
+    width: 40%;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    position: absolute;
+    left: 2px;
+    bottom: 2px;
+}
+
+button {
+    position: relative;
+    right: 2px;
+    bottom: 2px;
+    width: 40%;
+    height: 30px;
+}
+
+.title.active {
+    background-color: #343434;
+    color: black;
+    font-weight: 800;
+}
+
+img {
+    height: 200px;
+    max-width: 300px;
+}
+
+#resetButton {
+    position: sticky;
+    background-color: rgb(255, 0, 0);
+
+}
+
+#resetButton:hover {
+    background-color: cyan;
+}
+
+
+.weapons-container{
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    height: 30px;
+    padding: 40px;
+}
+
+.names{
+    background: lightgray;
+    padding: 12px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
